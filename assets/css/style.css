@@ -276,9 +276,47 @@ a {
 .footer {
     background-color: var(--vermelho-fundo-topo);
     color: var(--branco);
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9rem;
+    padding: 35px 0;
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar a linha no celular */
+    gap: 15px;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Configuração do link com o ícone SVG */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espaço elegante entre o ícone e a palavra */
+    color: var(--branco);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Faz a animação ser suave */
+}
+
+/* Efeito de passar o mouse: Muda de cor e sobe (levanta) */
+.social-link:hover {
+    color: #D4C3B3; /* Cor creme */
+    transform: translateY(-4px); /* Levanta 4 pixels */
+}
+
+/* Separador mais claro e charmoso */
+.separador {
+    color: #D4C3B3; /* Mesmo tom creme do hover */
+    opacity: 0.4; /* Fica um pouco transparente para não roubar a atenção */
+    font-size: 1.2rem;
 }
 
 /* =========================================
@@ -302,6 +340,12 @@ a {
     .info-local { grid-template-columns: 1fr; }
     
     .titulo-secao { font-size: 2.2rem; }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
 }
 
 /* =========================================
