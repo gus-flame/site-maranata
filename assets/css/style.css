@@ -359,7 +359,7 @@ a {
     
     /* === NOVO: Ajusta o pulo do menu no celular === */
     .section {
-        scroll-margin-top: 260px; /* Valor maior para compensar o cabeçalho mais alto no celular */
+        scroll-margin-top: 230px; /* Valor maior para compensar o cabeçalho mais alto no celular */
     }
     
     .info-local { grid-template-columns: 1fr; }
