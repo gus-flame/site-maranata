@@ -265,12 +265,10 @@ a {
 
 .mapa-box {
     background-color: #e0d8cc;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 350px; /* Deixei um pouco mais alto (350px) para o mapa ficar mais bonito */
     border-radius: 8px;
-    color: #777;
+    overflow: hidden; /* Faz com que as pontas quadradas do mapa fiquem arredondadas acompanhando a caixa */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra elegante em volta do mapa */
 }
 
 .footer {
