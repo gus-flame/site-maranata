@@ -329,10 +329,32 @@ a {
     
     .titulos-header h1 { font-size: 2.5rem; }
     
+    /* =========================================
+       NOVO MENU DESLIZANTE PARA CELULAR
+       ========================================= */
     .menu-lista {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
+        flex-direction: row; /* Coloca um ao lado do outro */
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 15px 20px;
+        
+        /* Ativa o arrastar com o dedo (Scroll Horizontal) */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Deixa o deslizar suave no iPhone */
+        
+        /* Oculta a barrinha de rolagem feia do navegador */
+        scrollbar-width: none; /* Para Firefox */
+        -ms-overflow-style: none;  /* Para Internet Explorer e Edge */
+    }
+
+    /* Oculta a barrinha de rolagem no Chrome, Safari e Opera */
+    .menu-lista::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Impede que o texto dos botões seja espremido */
+    .menu-lista li {
+        flex-shrink: 0;
     }
     
     .info-local { grid-template-columns: 1fr; }
