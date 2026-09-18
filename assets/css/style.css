@@ -357,6 +357,11 @@ a {
         flex-shrink: 0;
     }
     
+    /* === NOVO: Ajusta o pulo do menu no celular === */
+    .section {
+        scroll-margin-top: 260px; /* Valor maior para compensar o cabeçalho mais alto no celular */
+    }
+    
     .info-local { grid-template-columns: 1fr; }
     
     .titulo-secao { font-size: 2.2rem; }
