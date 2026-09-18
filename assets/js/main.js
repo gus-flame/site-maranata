@@ -1,9 +1,9 @@
 const CONFIG = {
     // Insira seu número (DDI + DDD + Número) sem espaços. Exemplo: 5541999999999
-    telefone: "5500000000000", 
+    telefone: "5541984843077", 
     
-    // Mensagem de introdução que já vem escrita para o cliente
-    mensagem: "Olá, Maranata! Quero fazer uma encomenda com vocês. Como faço para ver as opções e reservar?"
+    // Mensagem de introdução que já vem escrita para o client
+    mensagem: "Olá! Quero fazer uma encomenda com vocês. Como faço para ver as opções e reservar?"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
