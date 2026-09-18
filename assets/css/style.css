@@ -1,0 +1,362 @@
+/* =========================================
+   VARIÁVEIS DE CORES E FONTES
+   ========================================= */
+:root {
+    /* O vermelho escuro (vinho) serve de fundo para a logo vermelha clara brilhar */
+    --vermelho-fundo-topo: #4A0A0C; 
+    --vermelho-destaque: #A31D21; /* Vermelho vibrante mas não "doído" para botões e títulos */
+    
+    /* Fundo do site: um bege/creme muito suave, excelente conforto ocular */
+    --bege-corpo: #F8F5F0; 
+    --bege-menu: #EFEADD; /* Um pouco mais escuro para a barra de menu */
+    
+    --texto-escuro: #333333;
+    --branco: #FFFFFF;
+    
+    --fonte-titulos: 'Playfair Display', serif;
+    --fonte-textos: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-textos);
+    background-color: var(--bege-corpo);
+    color: var(--texto-escuro);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+/* =========================================
+   CABEÇALHO FIXO E GIGANTE
+   ========================================= */
+.header-fixo {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Parte de cima (Vermelho Escuro) */
+.header-topo {
+    background-color: var(--vermelho-fundo-topo);
+    padding: 25px 0;
+}
+
+.marca-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Distância entre logo e nome */
+}
+
+/* A logo agora tem espaço para ser grande */
+.logo-img {
+    height: 90px; /* Ajuste a altura conforme necessário */
+    width: auto;
+}
+
+.logo-img[src=""] {
+    display: none;
+}
+
+.titulos-header h1 {
+    color: var(--branco);
+    font-size: 3.2rem;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.titulos-header span {
+    color: #D4C3B3; /* Cor creme para o subtítulo */
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Parte de baixo (Menu de Navegação em Bege) */
+.nav-barra {
+    background-color: var(--bege-menu);
+    border-bottom: 2px solid #E3DBC7;
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    padding: 15px 0;
+}
+
+.menu-lista a {
+    color: var(--vermelho-fundo-topo);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative; /* Necessário para a animação */
+}
+
+/* Cria o traço invisível embaixo do botão */
+.menu-lista a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--vermelho-destaque);
+    transition: width 0.3s ease;
+}
+
+.menu-lista a:hover {
+    color: var(--vermelho-destaque);
+}
+
+/* O traço cresce quando passa o mouse */
+.menu-lista a:hover::after {
+    width: 100%; 
+}
+
+/* =========================================
+   SEÇÕES GERAIS
+   ========================================= */
+.section {
+    padding: 70px 0;
+    /* Essa linha abaixo avisa o site do tamanho do cabeçalho, arrumando o clique! */
+    scroll-margin-top: 170px; 
+}
+
+.bg-destaque {
+    /* Escurecemos de #A31D21 para #8A1519 */
+    background-color: #8A1519; 
+    color: var(--branco);
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--vermelho-fundo-topo);
+    margin-bottom: 50px;
+}
+
+/* =========================================
+   PRODUTOS (Cards Minimalistas)
+   ========================================= */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card {
+    background-color: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    border-bottom: 4px solid var(--vermelho-destaque);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #e0d8cc;
+}
+
+.card h3 {
+    color: var(--vermelho-fundo-topo);
+    font-size: 1.6rem;
+    padding: 20px 20px 10px 20px;
+}
+
+.card p {
+    padding: 0 20px 25px 20px;
+    color: #555;
+}
+
+/* =========================================
+   ENCOMENDAS E WHATSAPP
+   ========================================= */
+.bg-destaque {
+    /* Escurecemos de #A31D21 para #8A1519 */
+    background-color: #8A1519; 
+    color: var(--branco);
+}
+
+.encomenda-box {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.encomenda-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.encomenda-texto {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.encomenda-aviso {
+    font-size: 0.95rem;
+    color: #FFD4D4;
+    margin-bottom: 40px;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: var(--branco);
+    color: var(--vermelho-destaque);
+    padding: 18px 45px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Botão mais arredondado e amigável */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+   LOCALIZAÇÃO E RODAPÉ
+   ========================================= */
+.info-local {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.dados-local h3 {
+    color: var(--vermelho-destaque);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.mapa-box {
+    background-color: #e0d8cc;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #777;
+}
+
+.footer {
+    background-color: var(--vermelho-fundo-topo);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* =========================================
+   RESPONSIVIDADE (CELULARES)
+   ========================================= */
+@media (max-width: 768px) {
+    .marca-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .titulos-header h1 { font-size: 2.5rem; }
+    
+    .menu-lista {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .info-local { grid-template-columns: 1fr; }
+    
+    .titulo-secao { font-size: 2.2rem; }
+}
+
+/* =========================================
+   CARDÁPIO CHIQUE
+   ========================================= */
+.cardapio-chic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.titulo-categoria {
+    color: var(--vermelho-fundo-topo);
+    font-size: 1.8rem;
+    border-bottom: 2px solid #E3DBC7; /* Linha sutil embaixo do título da categoria */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-family: var(--fonte-titulos);
+}
+
+.item-menu {
+    margin-bottom: 25px;
+}
+
+.item-linha {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.item-nome {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--texto-escuro);
+}
+
+/* A mágica dos pontilhados automáticos */
+.item-pontos {
+    flex-grow: 1;
+    border-bottom: 2px dotted #CCC;
+    margin: 0 15px;
+    position: relative;
+    top: -4px;
+}
+
+.item-preco {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--vermelho-destaque);
+}
+
+.item-desc {
+    font-size: 0.95rem;
+    color: #777;
+    font-style: italic; /* Letra deitadinha para dar ar sofisticado */
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panificadora e Confeitaria Maranata - Especialista em tortas e pães doces.">
+    <title>Maranata | Panificadora e Confeitaria</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontes confortáveis: Playfair para elegância no título, Open Sans para leitura fácil -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO FIXO -->
+    <header class="header-fixo">
+        <!-- Parte 1: Logo e Nome (Bem grandes, alinhados à esquerda) -->
+        <div class="header-topo">
+            <div class="container marca-container">
+                <img src="assets/img/logo.png" alt="Logo Maranata" class="logo-img">
+                <div class="titulos-header">
+                    <h1>Maranata</h1>
+                    <span>Panificadora & Confeitaria</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Parte 2: Menu de Navegação (Logo abaixo do nome) -->
+        <nav class="nav-barra">
+            <div class="container">
+                <ul class="menu-lista">
+                    <li><a href="#produtos">Nossas Sucessos</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#encomendas">Como Encomendar</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PRODUTOS -->
+        <section id="produtos" class="section">
+            <div class="container">
+                <h2 class="titulo-secao">O que preparamos para você</h2>
+                <div class="grid-produtos">
+                    
+                    <div class="card">
+                        <img src="assets/img/torta-banana.jpg" alt="Torta de Banana">
+                        <h3>Torta de Banana</h3>
+                        <p>O nosso carro-chefe. Receita tradicional, com massa derretendo na boca e um sabor que só a Maranata tem.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="assets/img/mini-paes.jpg" alt="Mini Pães Variados">
+                        <h3>Mini Pães Variados</h3>
+                        <p>Opções doces e salgadas, perfeitos para o seu café da tarde, reuniões de família ou lanches rápidos.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="assets/img/torta-gelada.jpg" alt="Tortas Geladas">
+                        <h3>Tortas Geladas</h3>
+                        <p>Sobremesas refrescantes e cheias de sabor, ideais para fatiar e adoçar o seu dia.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CARDÁPIO -->
+        <section id="cardapio" class="section">
+            <div class="container">
+                <h2 class="titulo-secao">Nosso Cardápio</h2>
+                <div class="cardapio-chic">
+            
+                    <!-- Coluna 1: Bebidas -->
+                    <div class="categoria-menu">
+                    <h3 class="titulo-categoria">Bebidas Quentes</h3>
+                
+                        <div class="item-menu">
+                            <div class="item-linha">
+                                <span class="item-nome">Café com Leite</span>
+                                <span class="item-pontos"></span>
+                                <span class="item-preco">R$ 8,00</span>
+                            </div>
+                        <p class="item-desc">Tradicional café coado na hora com leite vaporizado.</p>
+                        </div>
+                
+                    <div class="item-menu">
+                        <div class="item-linha">
+                            <span class="item-nome">Cappuccino Especial</span>
+                            <span class="item-pontos"></span>
+                            <span class="item-preco">R$ 12,00</span>
+                        </div>
+                        <p class="item-desc">Expresso, leite, espuma cremosa e um toque de canela.</p>
+                    </div>
+                    </div>
+
+                <!-- Coluna 2: Lanches -->
+                <div class="categoria-menu">
+                    <h3 class="titulo-categoria">Lanches Clássicos</h3>
+                
+                    <div class="item-menu">
+                        <div class="item-linha">
+                            <span class="item-nome">Misto Quente</span>
+                            <span class="item-pontos"></span>
+                            <span class="item-preco">R$ 10,00</span>
+                        </div>
+                        <p class="item-desc">Pão francês crocante prensado com presunto e queijo.</p>
+                    </div>
+                
+                    <div class="item-menu">
+                        <div class="item-linha">
+                            <span class="item-nome">Pão de Queijo Recheado</span>
+                            <span class="item-pontos"></span>
+                            <span class="item-preco">R$ 14,00</span>
+                        </div>
+                        <p class="item-desc">Tradicional pão de queijo recheado com requeijão cremoso.</p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- COMO ENCOMENDAR (Explicação + Botão) -->
+        <section id="encomendas" class="section bg-destaque">
+            <div class="container">
+                <div class="encomenda-box">
+                    <h2>Gostou? Faça sua encomenda!</h2>
+                    <p class="encomenda-texto">
+                        Nossas encomendas são feitas de forma prática e rápida <strong>exclusivamente pelo WhatsApp</strong>. 
+                        Basta nos mandar uma mensagem dizendo quais produtos você deseja (tortas, mini pães, etc.), a quantidade e o horário que pretende retirar na panificadora.
+                    </p>
+                    <p class="encomenda-aviso">
+                        <em>* Trabalhamos com produtos frescos. Recomendamos fazer o pedido com antecedência.</em>
+                    </p>
+                    
+                    <a href="#" class="btn-whatsapp" id="btn-whatsapp">
+                        Falar com Atendimento
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOCALIZAÇÃO -->
+        <section id="localizacao" class="section">
+            <div class="container">
+                <h2 class="titulo-secao">Onde estamos</h2>
+                <div class="info-local">
+                    <div class="dados-local">
+                        <h3>Horário de Atendimento</h3>
+                        <p>Segunda a Sábado: 06h00 às 20h00</p>
+                        <p>Domingos e Feriados: 07h00 às 12h00</p>
+                        
+                        <h3 class="mt-20">Endereço</h3>
+                        <p>Rua Exemplo, 123 - Centro<br>Sua Cidade / Estado</p>
+                    </div>
+                    <div class="mapa-box">
+                        <p>Espaço para o mapa do Google</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ SIMPLES -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Maranata. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
